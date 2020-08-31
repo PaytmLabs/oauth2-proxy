@@ -8,6 +8,7 @@ Before you start:
 _Required_
 * install [kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 * install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+* install [kustomize](https://kubernetes-sigs.github.io/kustomize/installation/)
 
 _Optional_
 * install [helm 3](https://helm.sh/docs/intro/quickstart/#install-helm).

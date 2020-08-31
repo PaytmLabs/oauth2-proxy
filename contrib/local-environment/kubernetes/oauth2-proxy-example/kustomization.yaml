@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../../manifests/base
+
+namePrefix: oauth2-proxy-example-
+nameSuffix: -sample
+
+commonLabels:
+  app.kubernetes.io/instance: oauth2-proxy-sample
+
+configMapGenerator:
+- name: oauth2-proxy
+  files:
+  - oauth2-proxy.toml

@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: oauth2-proxy
+  annotations:
+    nginx.ingress.kubernetes.io/server-snippet: |
+      large_client_header_buffers 4 32k;
+spec:
+  rules:
+    - host: oauth2-proxy.localtest.me
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: oauth2-proxy
+              servicePort: 80
